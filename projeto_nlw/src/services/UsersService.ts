@@ -6,7 +6,7 @@ interface IUsersCreate {
 }
 
 class UsersService {
-    async create(email){
+    async create({email}: IUsersCreate){
         const usersRepository = getCustomRepository(UserRepository)
         const userExists = await usersRepository.findOne({ email })
         if(userExists){

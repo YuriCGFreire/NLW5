@@ -1,6 +1,6 @@
 import { getCustomRepository, Repository } from "typeorm"
 import { SettingsRepository } from "../repositories/SettingsRepository"
-import {Setting} from "../entities/setting"
+import {Setting} from "../entities/Setting"
 
 interface ISettingsCreate {
     chat: boolean,
@@ -47,7 +47,8 @@ class SettingsService {
             .set({ chat })
             .where("username= :username", {
                 username
-            }).execute()
+            })
+            .execute()
 
     }
 }

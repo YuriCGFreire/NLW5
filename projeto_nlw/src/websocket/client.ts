@@ -1,4 +1,4 @@
-import { Connection } from "../entities/Connection"
+/* import { Connection } from "../entities/Connection" */
 import { io } from "../http"
 import { ConnectionsService } from '../services/ConnectionsService'
 import { UsersService } from "../services/UsersService"

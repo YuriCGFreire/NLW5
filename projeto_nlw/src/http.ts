@@ -32,7 +32,7 @@ const http = createServer(app) //Criando o protocolo http
 const io = new Server(http) //Criando protocolo WS
 
 io.on("connection", (socket: Socket) => {
-    console.log("Se conectou!", socket.id)
+    console.log("Se conectou!")//, socket.id
 })
 
 app.use(express.json())

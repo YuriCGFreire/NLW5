@@ -14,7 +14,7 @@ class UsersService {
         const userExists = await this.usersRepository.findOne({ email })
         if(userExists){
             return userExists;
-        }
+        } 
         const user = this.usersRepository.create({
             email
         }) 
